@@ -1,0 +1,303 @@
+:root {
+  --green: #5cb85c;
+  --green_hover: #40a740;
+  --blue: #007bff;
+  --blue_hover: #0056b3;
+  --red: #d9534f;
+  --red_hover: #c9302c;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+h2 {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+#invoiceForm {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+#wrapper h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#invoiceForm input[type="text"],
+#invoiceForm input[type="email"],
+#invoiceForm input[type="date"],
+#invoiceForm input[type="number"],
+#invoiceForm button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#invoiceForm button {
+  background-color: var(--green);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#invoiceForm button:hover {
+  background-color: var(--green_hover);
+}
+
+#showInvoices {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: var(--blue);
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#showInvoices:hover {
+  background-color: var(--blue_hover);
+}
+
+#invoiceList {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: none;
+}
+
+.invoice {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.invoice p {
+  margin: 5px 0;
+}
+
+.edit,
+.delete,
+.create-pdf {
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit {
+  background-color: var(--green);
+}
+
+.edit:hover {
+  background-color: var(--green_hover);
+}
+
+.delete {
+  background-color: var(--red);
+}
+
+.delete:hover {
+  background-color: var(--red_hover);
+}
+
+.create-pdf {
+  background-color: #a9b1a9;
+}
+
+.create-pdf:hover {
+  background-color: #696c69;
+}
+
+/* Styles pour l'avertissement de modifications */
+
+.msg {
+  display: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
+  margin: 2rem;
+  font-size: 3rem;
+}
+
+.message {
+  display: none;
+  background-color: #5cb85c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
+  margin: 2rem;
+  font-size: 3rem;
+}
+
+/* Styles pour l'avertissement de modifications */
+.delete-message {
+  background-color: #d9534f;
+}
+
+/* Styles pour le formulaire d'édition */
+
+#editForm {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+#editForm h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#editForm input[type="text"],
+#editForm input[type="email"],
+#editForm input[type="date"],
+#editForm input[type="number"],
+#editForm button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#editForm button {
+  background-color: var(--green);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#editForm button#cancelEdit {
+  background-color: #88878a;
+}
+
+#editForm button#cancelEdit:hover {
+  background-color: #59585a;
+}
+
+#editForm button:hover {
+  background-color: var(--green_hover);
+}
+
+#cancelEdit {
+  background-color: var(--red);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#cancelEdit:hover {
+  background-color: var(--red_hover);
+}
+
+/* Styles pour la fenêtre modale de suppression */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button {
+  background-color: var(--red);
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Style pour le bouton "Supprimer" */
+#confirmDelete {
+  background-color: var(--red);
+}
+
+#confirmDelete:hover {
+  background-color: var(--red_hover);
+}
+
+#cancelDelete {
+  background-color: var(--green);
+}
+
+#cancelDelete:hover {
+  background-color: var(--green_hover);
+}
