@@ -24,5 +24,5 @@ Ce projet propose un système complet pour créer, afficher, éditer et supprime
 Pour lancer ce projet sur votre machine locale, suivez ces étapes :
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/votreNomUtilisateur/PROJET_FACTURE.git
+   git clone https://github.com/akamidev/PROJET_FACTURE.git
 2. Ouvrez `factures.html` dans votre navigateur pour voir le projet en action.
